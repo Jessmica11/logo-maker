@@ -41,7 +41,6 @@ return getLogoCharacteristics;
 }
 
 // will need function to write logo file based on user input
-// should probably add code so that it creates unique files each time
 
 function generateSVG(userDetails) {
   let shape;
@@ -55,15 +54,18 @@ function generateSVG(userDetails) {
     case 'square':
       shape = new Square(userDetails.text, userDetails.textColor, userDetails.shapeColor);
       break;
+      // included an error message here just in case
     default:
       throw new Error('Invalid shape');
   }
 
+  // should probably add code so that it creates unique files each time
 const svgContent = shape.getSVG();
 fs.writeFile(`${characters}-logo.svg`, svgContent);
 console.log("Your logo has been created as an .svg file!")
 }
 
+// to run everything
 async function run() {
     const userDetails = await getLogoCharacteristics();
     generateSVG(userDetails);
