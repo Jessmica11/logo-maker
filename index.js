@@ -2,7 +2,8 @@
 
 const fs = require('fs');
 const inquirer = require('inquirer');
-
+// Need to pull shapes from shape classes in shapes.js
+const {Triangle, Circle, Square} = require('./lib/shapes');
 
 // create a function for user input (inquirer)
 // 3-characters for logo
@@ -42,5 +43,12 @@ return getLogoCharacteristics;
 // will need function to write logo file based on user input
 // should probably add code so that it creates unique files each time
 
+const svgContent = shape.getSVG();
+fs.writeFile(`${characters}-logo.svg`, svgContent);
+console.log("Your logo has been created as an .svg file!")
+
+async function run() {
+    const userDetails = await getLogoCharacteristics();
+}
 
 run();
