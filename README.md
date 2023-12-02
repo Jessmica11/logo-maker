@@ -4,17 +4,21 @@
 
 View the Walkthrough Video [Here]()
 
-![](gif of program here)
+![ ](gif file of program here)
 
 ### Usage Instructions:
 
-### The following project includes:
-
 Sample file (see ./)
+
+## Resources I Used
 
 [Inquirer Package](https://www.npmjs.com/package/inquirer)
 
 [Jest testing package](https://www.npmjs.com/package/jest)
+
+[SVG Tutorial - mdn web docs](https://developer.mozilla.org/en-US/docs/Web/SVG)
+
+[extends keyword for classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
 
 ## Your Task
 
