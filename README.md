@@ -6,6 +6,8 @@ View the Walkthrough Video [Here]()
 
 ![](gif of program here)
 
+### Usage Instructions:
+
 ### The following project includes:
 
 Sample file (see ./)
