@@ -1,5 +1,4 @@
 // require libraries/directories here
-// index.js
 
 const fs = require('fs');
 const inquirer = require('inquirer');
@@ -38,7 +37,7 @@ async function getLogoCharacteristics() {
 
 // return the function
 return getLogoCharacteristics;
-
+}
 
 // will need function to write logo file based on user input
 // should probably add code so that it creates unique files each time
