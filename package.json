@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "inquirer": "^9.2.12"
+  },
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.0.11",
+    "jsdom": "^23.0.1",
+    "svg.js": "^2.7.1",
+    "svgdom": "^0.1.19"
+  }
+}
