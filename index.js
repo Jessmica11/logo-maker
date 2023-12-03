@@ -1,27 +1,13 @@
-// Set up virtual DOM with svgdom using dynamic import
-async function start() {
-  const { createSVGWindow } = await import('svgdom');
-  const window = createSVGWindow();
-  const document = window.document;
-  global.document = document;
+// index.js
+const fs = require('fs');
+const { Circle, Triangle, Square } = require('./lib/shapes');
+const inquirer = require('inquirer'); // require inquirer module
 
-  // Replaced the require statement with dynamic import since I kept getting errors
-  const fs = require('fs');
-
-  // Use dynamic import for inquirer
-  const inquirer = await import('inquirer');
-
-  const { Circle, Triangle, Square } = await import('./shapes');
-
-
-  // create a function for user input (inquirer)
-  // 3-characters for logo
-  // text color
-  // shape choices as 'list' from inquirer
-  // shape color
+(async () => {
+  const { prompt: inquirerPrompt } = require('inquirer');
 
   async function getLogoCharacteristics() {
-    const userDetails = await inquirer.prompt([
+    const userDetails = await inquirerPrompt([
       {
         type: 'input',
         name: 'characters',
@@ -34,7 +20,7 @@ async function start() {
       },
       {
         type: 'list',
-        name: 'shape',
+        name: 'shapeType',
         message: 'Please choose a shape for your logo:',
         choices: ['circle', 'triangle', 'square'],
       },
@@ -45,43 +31,34 @@ async function start() {
       },
     ]);
 
-    // return the function
     return userDetails;
   }
 
-  // will need function to write logo file based on user input
-
   function generateSVG(userDetails) {
-    let shape;
-    switch (userDetails.shape) {
+    let shapeType;
+    switch (userDetails.shapeType) {
       case 'circle':
-        shape = new Circle(userDetails.characters, userDetails.textColor, userDetails.shapeColor);
+        shapeType = new Circle(userDetails.characters, userDetails.textColor, userDetails.shapeColor);
         break;
       case 'triangle':
-        shape = new Triangle(userDetails.characters, userDetails.textColor, userDetails.shapeColor);
+        shapeType = new Triangle(userDetails.characters, userDetails.textColor, userDetails.shapeColor);
         break;
       case 'square':
-        shape = new Square(userDetails.characters, userDetails.textColor, userDetails.shapeColor);
+        shapeType = new Square(userDetails.characters, userDetails.textColor, userDetails.shapeColor);
         break;
-      // included an error message here just in case
       default:
         throw new Error('Invalid shape');
     }
 
-    // should probably add code so that it creates unique files each time
-    const svgContent = shape.getSVG();
+    const svgContent = shapeType.getSVG();
     fs.writeFileSync(`${userDetails.characters}-logo.svg`, svgContent);
     console.log('Your logo has been created as an .svg file!');
   }
 
-  // to run everything
   async function run() {
     const userDetails = await getLogoCharacteristics();
     generateSVG(userDetails);
   }
 
   run();
-}
-
-// Call the asynchronous function immediately
-start();
+})();
