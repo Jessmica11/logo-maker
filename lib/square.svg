@@ -1,7 +1,7 @@
 <svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
 
     <!-- Square -->
-    <rect x="50" y="50" width="200" height="200" fill="blue" />
+    <rect x="50" y="50" width="200" height="200" stroke="black" stroke-width=".5" fill="blue" />
 
     <!-- Centered Text -->
     <text x="150" y="175" font-size="60" text-anchor="middle" fill="white">SVG</text>
