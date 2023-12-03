@@ -6,21 +6,31 @@ View the Walkthrough Video [Here]()
 
 ![ ](gif file of program here)
 
-### Usage Instructions:
-
 Sample file (see ./)
 
-## Resources I Used
+### Usage Instructions:
+
+1. Open an integrated terminal for the logo-maker
+2. Enter "npm i" to install the proper items
+3. Run "node index.js"
+4. Answer the prompts
+5. See the new .svg file created with your logo characters as the naming convention
+
+## Resources/Documentation I Used While Developing this Program
 
 [Inquirer Package](https://www.npmjs.com/package/inquirer)
 
-[SVG Package](https://www.npmjs.com/package/@svgdotjs/svg.js)
-
-[Jest testing package](https://www.npmjs.com/package/jest)
+[ESM Package docs](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
 
 [SVG Tutorial - mdn web docs](https://developer.mozilla.org/en-US/docs/Web/SVG)
 
 [extends keyword for classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
+
+## Complications/Hurdles
+
+I spent a while getting errors and making changes, to then read that newer versions of inquirer.js is an ESM node module, so the code would have to be compiled to work properly (apparently). I went ahead and set inquirer as v 8.0.0 to try to avoid over-complicating my code.
+
+After some time I decided to make files like the provided circle.svg and created the same for the other two shape types. When I was trying to require the svg.js, I was getting too many errors and spending too much time trying to manipulate the dom window and compile. I thought that by having set properties for the shapes and then allowing user input to manipulate that instead, the code would be simpler.
 
 ## Your Task
 
