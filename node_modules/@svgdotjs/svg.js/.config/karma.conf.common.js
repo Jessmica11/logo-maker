@@ -31,12 +31,13 @@ module.exports = function (config) {
         included: false,
         served: true
       },
-      'dist/svg.min.js',
+      'dist/svg.js',
       'spec/spec/*.js'
     ],
 
     proxies: {
-      '/fixtures/': '/base/spec/fixtures/'
+      '/fixtures/': '/base/spec/fixtures/',
+      '/spec/': '/base/spec/'
     },
 
     // web server port

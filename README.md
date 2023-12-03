@@ -2,11 +2,15 @@
 
 ## Project Items
 
-View the Walkthrough Video [Here]()
+View the Walkthrough Video [Here](https://drive.google.com/file/d/1FzBiGqLQ8_VcGnotdPsUQfv6IkfdKP5h/view?usp=sharing)
 
-![ ](gif file of program here)
+<img src="./examples/logo-maker-example.png" alt="logo example from program" width="200"/>
 
-Sample file (see ./)
+You can find the sample files in:
+
+```
+./examples
+```
 
 ### Usage Instructions:
 
@@ -23,6 +27,8 @@ Sample file (see ./)
 [ESM Package docs](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
 
 [SVG Tutorial - mdn web docs](https://developer.mozilla.org/en-US/docs/Web/SVG)
+
+[SVG Shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
 
 [extends keyword for classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
 
