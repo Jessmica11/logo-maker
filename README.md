@@ -14,6 +14,8 @@ Sample file (see ./)
 
 [Inquirer Package](https://www.npmjs.com/package/inquirer)
 
+[SVG Package](https://www.npmjs.com/package/@svgdotjs/svg.js)
+
 [Jest testing package](https://www.npmjs.com/package/jest)
 
 [SVG Tutorial - mdn web docs](https://developer.mozilla.org/en-US/docs/Web/SVG)
